@@ -1,0 +1,8 @@
+my_first_job:
+  cron: "* /2 * * *"
+  class: "ImportShowsWorker"
+
+my_second_job:
+    cron: "* /3 * * * *"
+    class: "ImportEasternTimeZoneWorker"
+

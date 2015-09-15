@@ -1,0 +1,10 @@
+<h1>Showminder</h1>
+
+<%= form_tag '/login' do %>
+
+  Username: <%= text_field_tag :username %>
+  Passowrd: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+<%= link_to 'Register', new_user_path %>
