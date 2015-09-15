@@ -1,0 +1,31 @@
+<h1 class="centered topMargin t-shadow">Showminder</h1>
+
+ <!--  <div id="register" class="container see-thru">
+      <div class="login centered">
+        <form class="centered" action="/sessions" method="post">
+          <br><p class="white-color" >Username:</p> <input type="text" name="username"><br>
+          <br><p class="white-color">Password:</p> <input type="password" name="password"><br>
+          <input type="submit" value="Login">
+        </form>
+
+        <button><a href="/users/new" id="new-account-btn" class="margin">New Account</a></button>
+      </div>
+  </div> -->
+
+
+<%= form_for :user do |f| %>
+  <p>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </p>
+
+  <p>
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.submit "Login" %>
+  </p>
+<% end %>
+<%= link_to 'Register', new_user_path %>
+<!-- <button><a href="/users/new" id="new-account-btn" class="margin">New Account</a></button> -->

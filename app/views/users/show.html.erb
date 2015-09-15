@@ -1,0 +1,28 @@
+<div class="see-thru2">
+  <!-- <ul class="nav nav-pills l-margin">
+    <li role="presentation"><a href="/users/<%= @user.id %>/shows/all">My Shows</a></li>
+    <li role="presentation"><a href="/shows"> All Shows</a></li>
+    <li role="presentation"><a href="/users/<%= @user.id %>/edit">Account</a></li>
+    <li role="presentation"><a href="/logout">logout</a></li>
+  </ul> -->
+</div>
+<p></p>
+<p></p>
+<h1 class="centered">Your shows </h1>
+  <div>
+    <% @shows.each do |show| %>
+      <div class="see-thru-box">
+        <h3 class="white-color"><%= show.title %></h3>
+        <!-- http://apidock.com/ruby/DateTime/strftime -->
+        <h4 class="white-color"><%= show.pst_playtime.strftime('%l:%M %P') %></h4>
+        <h4 class="white-color"><%= show.est_playtime %></h4>
+        <h4 class="white-color"><%= show.channel %></h4>
+      </div>
+    <% end %>
+  </div>
+   <td><%= link_to 'Edit', edit_user_path(@user) %></td>
+  <td><%= link_to 'Show', shows_index_path(@all_shows) %></td>
+  <td><%= link_to 'Logout', '/logout' %></td>
+
+
+
